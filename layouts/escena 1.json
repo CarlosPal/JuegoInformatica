@@ -317,8 +317,8 @@
 						}
 					},
 					"world": {
-						"x": 738,
-						"y": 379,
+						"x": 912,
+						"y": 579,
 						"width": 51.99038372622383,
 						"height": 51.99038372622383,
 						"originX": 0.5,
@@ -358,10 +358,110 @@
 						}
 					},
 					"world": {
-						"x": -39,
-						"y": 84,
+						"x": -166,
+						"y": 77,
 						"width": 134.30048672658313,
 						"height": 134.30048672658313,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Vida",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 44.827653281586606,
+						"y": 40.225781773911876,
+						"width": 55.47972602672079,
+						"height": 55.47972602672079,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CVidas",
+					"properties": {
+						"text": "x3",
+						"enable-bbcode": true,
+						"font": "Impact",
+						"size": 37,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 16,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 85,
+						"y": 7,
+						"width": 61,
+						"height": 55,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Generador",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 803,
+						"y": -95,
+						"width": 67.51296171847298,
+						"height": 67.51296171847298,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
