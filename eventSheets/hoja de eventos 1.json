@@ -2,6 +2,16 @@
 	"name": "Hoja de eventos 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "nVidas",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 127733045224243
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -142,13 +152,193 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-created",
+					"id": "on-collision-with-another-object",
 					"objectClass": "Enemigo",
-					"sid": 906673615390741
+					"sid": 954594556849047,
+					"parameters": {
+						"object": "Jugador"
+					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"callFunction": "QuitarVida",
+					"sid": 468244405338550
+				}
+			],
 			"sid": 708945685010738
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bola",
+					"sid": 351277935749060,
+					"parameters": {
+						"object": "Jugador"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "QuitarVida",
+					"sid": 748953754803089
+				}
+			],
+			"sid": 639700214211204
+		},
+		{
+			"functionName": "QuitarVida",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 708992875787748,
+					"parameters": {
+						"variable": "nVidas",
+						"value": "nVidas-1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "CVidas",
+					"sid": 862805214103894,
+					"parameters": {
+						"text": "\"x\"& nVidas"
+					}
+				}
+			],
+			"sid": 461137200584656,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 810555414465035,
+							"parameters": {
+								"count": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Jugador",
+							"sid": 939742952269334,
+							"parameters": {
+								"opacity": "10"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 948247546706290,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Jugador",
+							"sid": 969026788646628,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 784498189224325
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 312104151805989,
+					"parameters": {
+						"interval-seconds": "random(1,3)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 453421498531787,
+					"parameters": {
+						"object-to-create": "Enemigo",
+						"layer": "0",
+						"x": "907",
+						"y": "378",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 953808757871691
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 442101911140024,
+					"parameters": {
+						"interval-seconds": "random(1,4)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Generador",
+					"sid": 862228257985585,
+					"parameters": {
+						"x": "random(19,800)",
+						"y": "-91"
+					}
+				}
+			],
+			"sid": 201582489779217,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "Generador",
+							"sid": 611949340800542
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 474574521520162,
+							"parameters": {
+								"object-to-create": "bola",
+								"layer": "0",
+								"x": "Generador.X",
+								"y": "Generador.Y",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 485819779633185
+				}
+			]
 		}
 	],
 	"sid": 774864974330069
