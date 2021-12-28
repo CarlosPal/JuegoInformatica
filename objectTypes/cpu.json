@@ -1,0 +1,57 @@
+{
+	"name": "CPU",
+	"plugin-id": "Sprite",
+	"sid": 297243849534358,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 886,
+						"height": 743,
+						"originX": 0.5,
+						"originY": 0.5033647375504711,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4277147,
+						"collisionPoly": {
+							"points": [
+								0.22686230248307,
+								0.17765814266487215,
+								0.5,
+								0.04979811574697174,
+								0.8205417607223476,
+								0.11978465679676985,
+								0.8984198645598194,
+								0.5033647375504711,
+								0.7945823927765236,
+								0.8546433378196501,
+								0.5,
+								0.9340511440107672,
+								0.1986455981941309,
+								0.8613728129205922,
+								0.10948081264108352,
+								0.5033647375504711
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 391704142145626,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
