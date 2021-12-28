@@ -1,0 +1,57 @@
+{
+	"name": "FuenteAlimentacion",
+	"plugin-id": "Sprite",
+	"sid": 148820390486403,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1548,
+						"height": 1181,
+						"originX": 0.5161498708010336,
+						"originY": 0.4377646062658764,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 565004,
+						"collisionPoly": {
+							"points": [
+								0.2868217054263566,
+								0.1371718882303133,
+								0.5161498708010336,
+								0.02201524132091448,
+								0.7622739018087855,
+								0.1143099068585944,
+								0.9812661498708011,
+								0.4377646062658764,
+								0.7855297157622739,
+								0.7908552074513124,
+								0.5161498708010336,
+								0.9729043183742591,
+								0.2829457364341085,
+								0.7425910245554614,
+								0.06266149870801034,
+								0.4377646062658764
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 916183200595696,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
