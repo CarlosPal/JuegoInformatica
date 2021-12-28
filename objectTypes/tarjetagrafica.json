@@ -1,0 +1,57 @@
+{
+	"name": "TarjetaGrafica",
+	"plugin-id": "Sprite",
+	"sid": 746131350094329,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 859,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2663738,
+						"collisionPoly": {
+							"points": [
+								0.059371362048894066,
+								0.085,
+								0.5,
+								0.020000000000000004,
+								0.9476135040745053,
+								0.07333333333333332,
+								0.9848661233993015,
+								0.5,
+								0.7776484284051223,
+								0.6816666666666666,
+								0.5,
+								0.785,
+								0.06984866123399301,
+								0.8983333333333333,
+								0.059371362048894066,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 639606164532070,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
