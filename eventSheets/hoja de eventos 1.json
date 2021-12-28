@@ -12,6 +12,16 @@
 			"sid": 127733045224243
 		},
 		{
+			"eventType": "variable",
+			"name": "nivelActual",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 342979956120461
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -214,79 +224,65 @@
 					"parameters": {
 						"text": "\"x\"& nVidas"
 					}
-				}
-			],
-			"sid": 461137200584656,
-			"children": [
+				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "repeat",
-							"objectClass": "System",
-							"sid": 810555414465035,
-							"parameters": {
-								"count": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-opacity",
-							"objectClass": "Jugador",
-							"sid": 939742952269334,
-							"parameters": {
-								"opacity": "10"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 948247546706290,
-							"parameters": {
-								"seconds": "0.3"
-							}
-						},
-						{
-							"id": "set-opacity",
-							"objectClass": "Jugador",
-							"sid": 969026788646628,
-							"parameters": {
-								"opacity": "100"
-							}
-						}
-					],
-					"sid": 784498189224325
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 312104151805989,
+					"id": "set-opacity",
+					"objectClass": "Jugador",
+					"sid": 955454336593846,
 					"parameters": {
-						"interval-seconds": "random(1,3)"
+						"opacity": "10"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 282370557462876,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Jugador",
+					"sid": 517081901972519,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 486956479130458,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Jugador",
+					"sid": 456674515585789,
+					"parameters": {
+						"opacity": "10"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 442137908706134,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Jugador",
+					"sid": 315552309179367,
+					"parameters": {
+						"opacity": "100"
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 453421498531787,
-					"parameters": {
-						"object-to-create": "Enemigo",
-						"layer": "0",
-						"x": "907",
-						"y": "378",
-						"create-hierarchy": false
-					}
-				}
-			],
-			"sid": 953808757871691
+			"sid": 461137200584656
 		},
 		{
 			"eventType": "block",
@@ -317,16 +313,21 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-visible",
-							"objectClass": "Generador",
-							"sid": 611949340800542
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 335980171745956,
+							"parameters": {
+								"variable": "nivelActual",
+								"comparison": 4,
+								"value": "1"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 474574521520162,
+							"sid": 147107238560477,
 							"parameters": {
 								"object-to-create": "bola",
 								"layer": "0",
@@ -336,9 +337,543 @@
 							}
 						}
 					],
-					"sid": 485819779633185
+					"sid": 858695305758553
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 682628441532803,
+					"parameters": {
+						"interval-seconds": "random(1,3)"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 668489234019683,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 471474227720125,
+							"parameters": {
+								"first-value": "nivelActual",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 613323755681458,
+							"parameters": {
+								"object-to-create": "Enemigo",
+								"layer": "0",
+								"x": "907",
+								"y": "378",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 313166385538238
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 545293365376477,
+					"parameters": {
+						"object": "Torre"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 784341965206997,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "nivelActual+1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Torre",
+					"sid": 273255861270887
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 785742250217492,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 914947454088994,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "CPU",
+					"sid": 853032141383518,
+					"parameters": {
+						"x": "159",
+						"y": "241"
+					}
+				}
+			],
+			"sid": 665585931153427
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 303028959760222,
+					"parameters": {
+						"object": "CPU"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 325263931258891,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "nivelActual+0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 608004850866914,
+					"parameters": {
+						"text": "\"Has conseguido la CPU\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CPU",
+					"sid": 856447698015146
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 164712944280841,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 227414553962244,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Disipador",
+					"sid": 710946356730223,
+					"parameters": {
+						"x": "699",
+						"y": "247"
+					}
+				}
+			],
+			"sid": 916131588336548
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 397524012924515,
+					"parameters": {
+						"object": "Disipador"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 250090988482398,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "nivelActual+1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 317826361079700,
+					"parameters": {
+						"text": "\"Has conseguido el disipador\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Disipador",
+					"sid": 842020088213951
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 952722448418710,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 396364051419397,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlacaBase",
+					"sid": 930774260219037,
+					"parameters": {
+						"x": "153",
+						"y": "361"
+					}
+				}
+			],
+			"sid": 825870962707270
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 369623862977012,
+					"parameters": {
+						"object": "PlacaBase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 800753944168368,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "nivelActual+0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 884416138857194,
+					"parameters": {
+						"text": "\"Has conseguido la placa base\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PlacaBase",
+					"sid": 103927154216547
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 213087289190216,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 168250545245812,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "MemoriasRAM",
+					"sid": 168157970400495,
+					"parameters": {
+						"x": "433",
+						"y": "102"
+					}
+				}
+			],
+			"sid": 899974918310855
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 887447632813221,
+					"parameters": {
+						"object": "MemoriasRAM"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 248529519959714,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "nivelActual+0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 224163100267587,
+					"parameters": {
+						"text": "\"Has conseguido las memorias RAM\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "MemoriasRAM",
+					"sid": 388676902850662
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 246592859979465,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 851753947684901,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "DiscoDuro",
+					"sid": 197061517649642,
+					"parameters": {
+						"x": "736",
+						"y": "365"
+					}
+				}
+			],
+			"sid": 844428447882627
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 330814656057482,
+					"parameters": {
+						"object": "DiscoDuro"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 367854139552837,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "nivelActual+0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 318731773410914,
+					"parameters": {
+						"text": "\"Has conseguido el disco duro\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "DiscoDuro",
+					"sid": 771588972871320
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 216074072025096,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 751803048707305,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "TarjetaGrafica",
+					"sid": 333355233291777,
+					"parameters": {
+						"x": "154",
+						"y": "126"
+					}
+				}
+			],
+			"sid": 321648220417965
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 402790514875698,
+					"parameters": {
+						"object": "TarjetaGrafica"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 645402989579289,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "nivelActual+0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 453284795664072,
+					"parameters": {
+						"text": "\"Has conseguido la tarjeta gráfica\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "TarjetaGrafica",
+					"sid": 841755712518096
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 759337307900013,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 316308142184925,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "FuenteAlimentacion",
+					"sid": 248168965077924,
+					"parameters": {
+						"x": "706",
+						"y": "101"
+					}
+				}
+			],
+			"sid": 493329316032425
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jugador",
+					"sid": 820038798618151,
+					"parameters": {
+						"object": "FuenteAlimentacion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 696624872715059,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 976778896194032,
+					"parameters": {
+						"text": "\"Has conseguido la fuente de alimentación\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "FuenteAlimentacion",
+					"sid": 288943100713851
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 643953483573932,
+					"parameters": {
+						"seconds": "3.0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtTutorial",
+					"sid": 101143615284926,
+					"parameters": {
+						"text": "\"\""
+					}
+				}
+			],
+			"sid": 436741787178768
 		}
 	],
 	"sid": 774864974330069
