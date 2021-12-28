@@ -76,7 +76,16 @@
 			"bola",
 			"Vida",
 			"CVidas",
-			"Generador"
+			"Generador",
+			"Torre",
+			"txtTutorial",
+			"CPU",
+			"Disipador",
+			"PlacaBase",
+			"MemoriasRAM",
+			"DiscoDuro",
+			"TarjetaGrafica",
+			"FuenteAlimentacion"
 		],
 		"subfolders": []
 	},
