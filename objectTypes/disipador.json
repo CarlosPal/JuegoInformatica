@@ -1,0 +1,57 @@
+{
+	"name": "Disipador",
+	"plugin-id": "Sprite",
+	"sid": 843837792409300,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 772,
+						"height": 911,
+						"originX": 0.4961139896373057,
+						"originY": 0.4950603732162459,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9326460,
+						"collisionPoly": {
+							"points": [
+								0.02072538860103627,
+								0.018660812294182216,
+								0.4961139896373057,
+								0.013172338090010977,
+								0.9572538860103627,
+								0.029637760702524697,
+								0.9378238341968912,
+								0.4950603732162459,
+								0.8989637305699482,
+								0.9099890230515917,
+								0.4961139896373057,
+								0.8024149286498353,
+								0.2681347150259068,
+								0.7607025246981339,
+								0.04533678756476684,
+								0.4950603732162459
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 747880766646456,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
