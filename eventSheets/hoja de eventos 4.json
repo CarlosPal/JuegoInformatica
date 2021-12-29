@@ -1,0 +1,49 @@
+{
+	"name": "Hoja de eventos 4",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 184866065471647
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "Fondo",
+					"sid": 455634252964376,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"EscalaDeGrises\""
+					}
+				}
+			],
+			"sid": 703690929496840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btnIniciar",
+					"sid": 104947564777184
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 695692280701929,
+					"parameters": {
+						"layout": "EscenaJuego"
+					}
+				}
+			],
+			"sid": 640518882861168
+		}
+	],
+	"sid": 837507257640979
+}
