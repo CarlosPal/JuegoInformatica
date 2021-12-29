@@ -19,6 +19,17 @@
 						"mode": "disable",
 						"effect": "\"EscalaDeGrises\""
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 850199821245530,
+					"parameters": {
+						"audio-file": "MusicaFondo",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 703690929496840
