@@ -19,6 +19,22 @@
 						"mode": "enable",
 						"effect": "\"EscalaDeGrises\""
 					}
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Musica",
+					"sid": 625640498083469
+				},
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 112841987675307,
+					"parameters": {
+						"audio-file": "GameOver",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 619977437383054
@@ -33,6 +49,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 587558174789893,
+					"parameters": {
+						"audio-file": "MusicaFondo",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
