@@ -43,6 +43,27 @@
 				}
 			],
 			"sid": 524481422655598
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btnMenu",
+					"sid": 388424283293014
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 100880126225083,
+					"parameters": {
+						"layout": "EscenaMenuPrincipal"
+					}
+				}
+			],
+			"sid": 391440705102165
 		}
 	],
 	"sid": 615359418552821
