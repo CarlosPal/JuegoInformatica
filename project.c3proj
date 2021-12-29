@@ -31,6 +31,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Botón",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Plataforma",
@@ -61,6 +77,14 @@
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "grayscale",
+			"name": "Escala de grises",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "t0n11lxx3rh",
@@ -85,7 +109,14 @@
 			"MemoriasRAM",
 			"DiscoDuro",
 			"TarjetaGrafica",
-			"FuenteAlimentacion"
+			"FuenteAlimentacion",
+			"Enemigo2",
+			"bola2",
+			"Generador2",
+			"GameOver",
+			"btnReiniciar",
+			"btnMenu",
+			"Musica"
 		],
 		"subfolders": []
 	},
@@ -97,13 +128,17 @@
 	},
 	"layouts": {
 		"items": [
-			"Escena 1"
+			"EscenaJuego",
+			"EscenaDerrota",
+			"EscenaVictoria"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Hoja de eventos 1"
+			"Hoja de eventos 1",
+			"Hoja de eventos 2",
+			"Hoja de eventos 3"
 		],
 		"subfolders": []
 	},
@@ -117,7 +152,13 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "The_Polish_Ambassador__The_Diplomatic_Scandal_-_06_-_Forest_Funk.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 971323036870546
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
