@@ -19,6 +19,17 @@
 						"mode": "disable",
 						"effect": "\"EscalaDeGrises\""
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 397672649772974,
+					"parameters": {
+						"audio-file": "Victoria",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 680049826529721
@@ -33,6 +44,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 587558174789893,
+					"parameters": {
+						"audio-file": "MusicaFondo",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
