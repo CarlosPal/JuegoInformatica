@@ -160,9 +160,29 @@
 		"music": {
 			"items": [
 				{
-					"name": "The_Polish_Ambassador__The_Diplomatic_Scandal_-_06_-_Forest_Funk.webm",
+					"name": "MusicaFondo.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 971323036870546
+				},
+				{
+					"name": "GameOver.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 459384903799895
+				},
+				{
+					"name": "CogerPieza.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 896961561871503
+				},
+				{
+					"name": "Victoria.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 895777879414042
+				},
+				{
+					"name": "Golpe1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 430347313020604
 				}
 			],
 			"subfolders": []
