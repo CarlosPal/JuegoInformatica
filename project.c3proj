@@ -116,7 +116,11 @@
 			"GameOver",
 			"btnReiniciar",
 			"btnMenu",
-			"Musica"
+			"Musica",
+			"OrdenadorFinal",
+			"JugaMenúPrincipal",
+			"btnIniciar",
+			"txtTitulo"
 		],
 		"subfolders": []
 	},
@@ -130,7 +134,8 @@
 		"items": [
 			"EscenaJuego",
 			"EscenaDerrota",
-			"EscenaVictoria"
+			"EscenaVictoria",
+			"EscenaMenuPrincipal"
 		],
 		"subfolders": []
 	},
@@ -138,7 +143,8 @@
 		"items": [
 			"Hoja de eventos 1",
 			"Hoja de eventos 2",
-			"Hoja de eventos 3"
+			"Hoja de eventos 3",
+			"Hoja de eventos 4"
 		],
 		"subfolders": []
 	},
