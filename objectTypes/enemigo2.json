@@ -1,0 +1,159 @@
+{
+	"name": "Enemigo2",
+	"plugin-id": "Sprite",
+	"sid": 904267730301508,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bala",
+			"sid": 765374722527906
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 14,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4191812,
+						"collisionPoly": {
+							"points": [
+								0.1428571428571428,
+								0.1428571428571428,
+								0.5,
+								0.1428571428571428,
+								0.8571428571428571,
+								0.0714285714285714,
+								0.9285714285714286,
+								0.5,
+								0.7857142857142857,
+								0.7857142857142857,
+								0.5,
+								0.8571428571428571,
+								0.1428571428571428,
+								0.7857142857142857,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 14,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8015506,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.5,
+								0.9285714285714286,
+								0.8571428571428571,
+								0.5,
+								0.8571428571428571,
+								0.1428571428571429,
+								0.8571428571428571,
+								0.0714285714285714,
+								0.5,
+								0.1428571428571429,
+								0.07142857142857142,
+								0.5,
+								0.21428571428571427,
+								0.7857142857142857,
+								0.21428571428571427
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 14,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5248362,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.5,
+								0.9285714285714286,
+								0.8571428571428571,
+								0.5,
+								0.7857142857142857,
+								0.2142857142857143,
+								0.7857142857142857,
+								0.0714285714285714,
+								0.5,
+								0.1428571428571429,
+								0.07142857142857142,
+								0.5,
+								0.14285714285714285,
+								0.8571428571428572,
+								0.14285714285714285
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 14,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7001032,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.5,
+								0.9285714285714286,
+								0.8571428571428571,
+								0.5,
+								0.8571428571428571,
+								0.1428571428571429,
+								0.8571428571428571,
+								0.0714285714285714,
+								0.5,
+								0.1428571428571429,
+								0.07142857142857142,
+								0.5,
+								0.21428571428571427,
+								0.7857142857142857,
+								0.21428571428571427
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 156804985976665,
+				"name": "Andar",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
