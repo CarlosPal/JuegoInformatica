@@ -22,6 +22,67 @@
 			"sid": 342979956120461
 		},
 		{
+			"eventType": "variable",
+			"name": "Invencible",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 672737971911977
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 521964592482645
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "Fondo",
+					"sid": 382037497914284,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"EscalaDeGrises\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 135976190908843,
+					"parameters": {
+						"variable": "nivelActual",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 152986932659803,
+					"parameters": {
+						"variable": "nVidas",
+						"value": "3"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 587558174789893,
+					"parameters": {
+						"audio-file": "The_Polish_Ambassador__The_Diplomatic_Scandal_-_06_-_Forest_Funk",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 700364821147422
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -199,6 +260,46 @@
 			"sid": 639700214211204
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bola2",
+					"sid": 432172861293689,
+					"parameters": {
+						"object": "Jugador"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "QuitarVida",
+					"sid": 562471971021680
+				}
+			],
+			"sid": 900946465030790
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemigo2",
+					"sid": 587767124881567,
+					"parameters": {
+						"object": "Jugador"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "QuitarVida",
+					"sid": 923911351232632
+				}
+			],
+			"sid": 539207461305835
+		},
+		{
 			"functionName": "QuitarVida",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -207,82 +308,189 @@
 			"functionParameters": [],
 			"eventType": "function-block",
 			"conditions": [],
-			"actions": [
+			"actions": [],
+			"sid": 461137200584656,
+			"children": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 708992875787748,
-					"parameters": {
-						"variable": "nVidas",
-						"value": "nVidas-1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 970215843730750,
+							"parameters": {
+								"variable": "Invencible"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 350289728647775
 				},
 				{
-					"id": "set-text",
-					"objectClass": "CVidas",
-					"sid": 862805214103894,
-					"parameters": {
-						"text": "\"x\"& nVidas"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Jugador",
-					"sid": 955454336593846,
-					"parameters": {
-						"opacity": "10"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 282370557462876,
-					"parameters": {
-						"seconds": "0.1"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Jugador",
-					"sid": 517081901972519,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 486956479130458,
-					"parameters": {
-						"seconds": "0.1"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Jugador",
-					"sid": 456674515585789,
-					"parameters": {
-						"opacity": "10"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 442137908706134,
-					"parameters": {
-						"seconds": "0.1"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Jugador",
-					"sid": 315552309179367,
-					"parameters": {
-						"opacity": "100"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 306814770147218
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 541264644341313,
+							"parameters": {
+								"variable": "Invencible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 285330227691475,
+							"parameters": {
+								"variable": "nVidas",
+								"value": "nVidas-1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "CVidas",
+							"sid": 793453209136108,
+							"parameters": {
+								"text": "\"x\"& nVidas"
+							}
+						}
+					],
+					"sid": 536483355475947,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 870898418025970,
+									"parameters": {
+										"variable": "nVidas",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Jugador",
+									"sid": 545981207096002
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 531816745140431,
+									"parameters": {
+										"seconds": "2.0"
+									}
+								},
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 883209205217318,
+									"parameters": {
+										"variable": "Invencible"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 837867788124048,
+									"parameters": {
+										"layout": "EscenaDerrota"
+									}
+								}
+							],
+							"sid": 694640814484370
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 895355128622311
+								}
+							],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "Jugador",
+									"sid": 333573685863007,
+									"parameters": {
+										"opacity": "10"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 389672752161948,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Jugador",
+									"sid": 289507380849869,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 796199832917176,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Jugador",
+									"sid": 291793004874278,
+									"parameters": {
+										"opacity": "10"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 552831929493189,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Jugador",
+									"sid": 367567411916158,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 843221021870012,
+									"parameters": {
+										"variable": "Invencible"
+									}
+								}
+							],
+							"sid": 717185155885248
+						}
+					]
 				}
-			],
-			"sid": 461137200584656
+			]
 		},
 		{
 			"eventType": "block",
@@ -347,6 +555,63 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
+					"sid": 728701383201571,
+					"parameters": {
+						"interval-seconds": "random(1,4)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Generador2",
+					"sid": 240319113568465,
+					"parameters": {
+						"x": "929",
+						"y": "random(64,263)"
+					}
+				}
+			],
+			"sid": 113500873546497,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 311521888716181,
+							"parameters": {
+								"variable": "nivelActual",
+								"comparison": 4,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 233356982895514,
+							"parameters": {
+								"object-to-create": "bola2",
+								"layer": "0",
+								"x": "Generador2.X",
+								"y": "Generador2.Y",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 282721973789226
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
 					"sid": 682628441532803,
 					"parameters": {
 						"interval-seconds": "random(1,3)"
@@ -385,6 +650,53 @@
 						}
 					],
 					"sid": 313166385538238
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 501909485231114,
+							"parameters": {
+								"interval-seconds": "random(1,3)"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 748677532355515,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 110492523971880,
+									"parameters": {
+										"first-value": "nivelActual",
+										"comparison": 4,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 276006789815425,
+									"parameters": {
+										"object-to-create": "Enemigo2",
+										"layer": "0",
+										"x": "-52",
+										"y": "378",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 602868781456718
+						}
+					]
 				}
 			]
 		},
@@ -648,10 +960,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 248529519959714,
+					"sid": 724164242849570,
 					"parameters": {
 						"variable": "nivelActual",
-						"value": "nivelActual+0"
+						"value": "nivelActual+1"
 					}
 				},
 				{
@@ -711,10 +1023,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 367854139552837,
+					"sid": 518741887783347,
 					"parameters": {
 						"variable": "nivelActual",
-						"value": "nivelActual+0"
+						"value": "nivelActual+1"
 					}
 				},
 				{
@@ -870,6 +1182,22 @@
 					"sid": 101143615284926,
 					"parameters": {
 						"text": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 521387701247758,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 838478308486738,
+					"parameters": {
+						"layout": "\"EscenaVictoria\""
 					}
 				}
 			],
