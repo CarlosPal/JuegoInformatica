@@ -1,0 +1,57 @@
+{
+	"name": "OrdenadorFinal",
+	"plugin-id": "Sprite",
+	"sid": 343954279987006,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 555,
+						"height": 795,
+						"originX": 0.5,
+						"originY": 0.5006289308176101,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 600129,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								1,
+								0,
+								1,
+								0.5006289308176101,
+								1,
+								1,
+								0.5,
+								1,
+								0,
+								1,
+								0,
+								0.5006289308176101
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 903281591895715,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
