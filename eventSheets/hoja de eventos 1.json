@@ -67,17 +67,6 @@
 						"variable": "nVidas",
 						"value": "3"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Musica",
-					"sid": 587558174789893,
-					"parameters": {
-						"audio-file": "The_Polish_Ambassador__The_Diplomatic_Scandal_-_06_-_Forest_Funk",
-						"loop": "looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 700364821147422
@@ -336,6 +325,17 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Musica",
+							"sid": 564484270080082,
+							"parameters": {
+								"audio-file": "Golpe1",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"\""
+							}
+						},
 						{
 							"id": "toggle-boolean-eventvar",
 							"objectClass": "System",
@@ -714,6 +714,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 532280141739143,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 784341965206997,
@@ -768,6 +779,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 163459147752342,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
@@ -832,6 +854,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 689286599960060,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 250090988482398,
@@ -894,6 +927,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 498059163304865,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
@@ -958,6 +1002,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 131068999120387,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 724164242849570,
@@ -1020,6 +1075,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 509105582378765,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
@@ -1084,6 +1150,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 188748413552048,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 645402989579289,
@@ -1146,6 +1223,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Musica",
+					"sid": 849365900958213,
+					"parameters": {
+						"audio-file": "CogerPieza",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
