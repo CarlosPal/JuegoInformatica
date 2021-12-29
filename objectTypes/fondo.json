@@ -5,7 +5,12 @@
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "grayscale",
+			"name": "EscalaDeGrises"
+		}
+	],
 	"animations": {
 		"items": [
 			{
