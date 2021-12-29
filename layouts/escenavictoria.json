@@ -143,6 +143,35 @@
 							1
 						]
 					}
+				},
+				{
+					"type": "OrdenadorFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 36,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 255,
+						"y": 302,
+						"width": 219.63168947012355,
+						"height": 314.60755518693367,
+						"originX": 0.5,
+						"originY": 0.5006289308176101,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 863890483086332,
