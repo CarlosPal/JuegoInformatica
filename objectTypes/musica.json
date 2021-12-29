@@ -1,0 +1,21 @@
+{
+	"name": "Musica",
+	"plugin-id": "Audio",
+	"sid": 950678079446010,
+	"singleglobal-inst": {
+		"type": "Musica",
+		"properties": {
+			"timescale-audio": "sounds-and-music",
+			"save-load": "music-only",
+			"play-in-background": false,
+			"latency-hint": "interactive",
+			"panning-model": "hrtf",
+			"distance-model": "inverse",
+			"listener-z-height": 600,
+			"reference-distance": 600,
+			"maximum-distance": 10000,
+			"roll-off-factor": 1
+		},
+		"uid": 35
+	}
+}
